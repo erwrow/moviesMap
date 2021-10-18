@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geocoding Service</title>
+	<link rel="stylesheet" type="text/css" href="css/estilosMapa.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<script src="js/map.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/regularDataList.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body onload="">
+	<div id="map"></div>
+	
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly&channel=2" async></script>
+	
+	<script>
+		let regular = true;
+		updateData();
+	</script>
+  </body>
+</html>
