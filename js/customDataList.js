@@ -1,12 +1,9 @@
-let offset = 0;	
+/*
+populateList	->	Carga los títulos de las películas en el datalist custom.
+*/
 
 function populateList(movies)
-{
-	//https://www.cssscript.com/infinite-list-scrolling-effect-in-javascript-and-css/
-	//http://dev.socrata.com/docs/queries/having.html -> traer los items que tengan ubicacion
-	//http://dev.socrata.com/docs/queries/where.html 
-	//console.log(movies);
-	
+{	
 	let lista = document.getElementById("lista");
 	lista.innerHTML = "";
 	for(let movie of movies)

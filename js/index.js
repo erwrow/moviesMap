@@ -1,7 +1,23 @@
+/*
+pNumbers			->	Promesa para cargar los títulos y la máxima cantidad 
+						de items en la tabla.
+getData				->	Función encargada de solicitar los datos del API
+generateMarkers		->	Función encargada de generar los marcadores en el mapa
+						y la leyenda de los mismos.
+showAll				->	Función para buscar y mostrar en el mapa todos los puntos
+						de las películas.
+searchMovies		->	Esta función busca todos los títulos disponibles de las 
+						películas.
+selectedMovieEvent	->	Esta función obtiene el nombre de la película seleccionada
+						recibiendo un evento.
+selectedMovie		->	Función que devuelve todos los datos de determinado film.
+*/
+
+let offset = 0;	
 let max;
 let maxQ;
 let nShow;	//specify how many movies will be shown in the custom datalist, if necessary.
-let pelis;
+
 let pNumbers = new Promise(function(resolve, reject) {
 					
 	let filters = "$select=count(DISTINCT%20title),count(title)";
@@ -105,8 +121,6 @@ function searchMovies(wheel){
 
 	promise.then(
 	function(movies){
-		console.log(movies);
-		pelis = movies;
 		populateList(movies)
 	},
 	function(error) {

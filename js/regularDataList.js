@@ -1,4 +1,7 @@
-let offset = 0;
+/*
+populateList	->	Carga los títulos de las películas en el datalist con options.
+updateData		->	Solicita los datos a cargar en el datalist a la api externa.
+*/
 
 function populateList(movies)
 {

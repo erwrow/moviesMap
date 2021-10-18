@@ -1,3 +1,12 @@
+/*
+initMap -> 	Inicializa el mapa y genera los elementos dentro del mismo
+			para poder buscar las películas.
+clear 	->	Limpia los marcadores del mapa (esta función no es tan eficiente
+			como reiniciar el mapa).
+geocode ->	Convierte de ubicaciones (intersecciones entre calles o puntos 
+			de interés) a coordenadas y genera los marcadores.
+*/
+
 let map;
 let marker;
 let geocoder;
